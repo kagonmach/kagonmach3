@@ -64,6 +64,17 @@
 };
 firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
+    db.collection("test").add({
+  message: "Firestore接続テスト",
+  time: new Date()
+})
+.then(() => {
+  alert("✅ Firestoreにデータを送信できました！");
+})
+.catch((error) => {
+  alert("❌ Firestore接続エラー: " + error);
+});
+
 
 const $posts = document.getElementById('posts');
 const escapeHtml = str => str.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;');
@@ -132,6 +143,7 @@ document.getElementById('submitBtn').addEventListener('click', async ()=>{
 </body>
 
 </html>
+
 
 
 
