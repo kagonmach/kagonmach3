@@ -41,13 +41,14 @@
     </section>
     </main>
     <aside>
-  <input id="author" placeholder="名前（省略可）">
+  <input id="author" placeholder="ニックネーム（省略可）">
      <textarea id="content" placeholder="投稿内容"></textarea>
       <input id="imageInput" type="file" accept="image/*">
       <button id="submitBtn">投稿</button>
       <div id="posts"></div>
     </aside>
-<script type="module">
+<script>
+
   // Import the functions you need from the SDKs you need
  const firebaseConfig = {
   apiKey: "AIzaSyAz9_Qiy4pTBaRuMI1cYWwzo1FZBjn0XeM",
@@ -128,6 +129,7 @@ document.getElementById('submitBtn').addEventListener('click', async ()=>{
 </body>
 
 </html>
+
 
 
 
