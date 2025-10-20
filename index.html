@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="google-site-verification" content="EVg4xnJw3nUhs6KE6N3ohNVe0wAapAHLhykoi3XoFV4" />
-    <title>かごんまチャンネル22</title>
+    <title>かごんまチャンネル222</title>
     <link rel="stylesheet" href="kagoshima1.css">
 </head>
 <body>
@@ -70,16 +70,13 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
+
     db.collection("test").add({
-  message: "Firestore接続テスト",
+  message: "接続テスト成功！",
   time: new Date()
 })
-.then(() => {
-  alert("✅ Firestoreにデータを送信できました！");
-})
-.catch((error) => {
-  alert("❌ Firestore接続エラー: " + error);
-});
+.then(() => alert("✅ Firestoreにデータを送信できました！"))
+.catch(e => alert("❌ Firestore接続エラー: " + e));
 
 
 const $posts = document.getElementById('posts');
@@ -149,6 +146,7 @@ document.getElementById('submitBtn').addEventListener('click', async ()=>{
 </body>
 
 </html>
+
 
 
 
